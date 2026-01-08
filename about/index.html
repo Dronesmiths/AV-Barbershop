@@ -59,7 +59,7 @@
             </nav>
             <div class="header-actions">
                 <a href="tel:6614414959" class="phone-link mobile-hide"><i class="fas fa-phone"></i> (661) 441-4959</a>
-                <a href="/contact/" class="btn btn-primary">Book Appointment</a>
+                <a href="#" class="btn btn-primary js-book-btn">Book Appointment</a>
                 <button class="mobile-menu-btn" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
             </div>
         </div>
@@ -251,7 +251,7 @@
         <div class="container" style="position: relative; z-index: 1; color: var(--white);">
             <h2 style="color: var(--white); font-size: 2.5rem; margin-bottom: 20px;">Ready to Look Your Best?</h2>
             <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Book your appointment today.</p>
-            <a href="../contact/" class="btn btn-secondary"
+            <a href="#" class="btn btn-secondary js-book-btn"
                 style="padding: 15px 40px; font-size: 1.1rem; background: var(--primary-gold); color: #000; border: none;">
                 Book Appointment
             </a>
@@ -265,14 +265,15 @@
             <!-- Brand -->
             <div class="aw-footer-brand">
                 <h3>Kings Cut <span>Barber Shop</span></h3>
-                <p>Your trusted local barbershop.</p>
+                <p>Your trusted local barbershop in the Antelope Valley.</p>
             </div>
 
             <!-- Contact -->
             <div class="aw-footer-contact">
                 <p class="aw-footer-phone">
-                    <span>📞</span>
+                    <i class="fas fa-cut"></i>
                     <a href="tel:6614414959">(661) 441-4959</a>
+                    <i class="fas fa-cut" style="transform: scaleX(-1);"></i>
                 </p>
                 <div style="margin-top: 15px;">
                     <a href="https://www.instagram.com/_kings_cut_" target="_blank"
@@ -288,7 +289,6 @@
             </div>
 
             <!-- Services -->
-            <!-- Services -->
             <div class="aw-footer-services">
                 <h4>Our Services</h4>
                 <ul>
@@ -296,6 +296,7 @@
                     <li><a href="/services/beard-trim/">Beard Trim</a></li>
                     <li><a href="/services/shave/">Hot Towel Shave</a></li>
                     <li><a href="/services/kids-cut/">Kids Cut</a></li>
+                    <li><a href="/services/line-up/">Line Up</a></li>
                     <li><a href="/services/full-service/">The Full Service</a></li>
                 </ul>
             </div>
@@ -314,7 +315,7 @@
                     <li style="margin-bottom: 10px;">
                         <a href="/locations/lancaster/">Lancaster Shop</a>
                         <br>
-                        <a href="https://www.google.com/maps/place/KINGS+CUT+LANCASTER/@34.6072577,-118.2018416,20015m/data=!3m1!1e3!4m10!1m2!2m1!1sking+cuts!3m6!1s0x80c25b0fa78bee55:0x887d5db9680747a7!8m2!3d34.6902065!4d-118.1668145!15sCglraW5nIGN1dHNaCyIJa2luZyBjdXRzkgELYmFyYmVyX3Nob3CaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjFLU1dJemJIcFdSRnBHVTFkb2QxZ3lOWGRqYkU1MVV6QkdUVlF6WXhBQuABAPoBBAghEC0!16s%2Fg%2F11x97qnf6s?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoASAFQAw%3D%3D"
+                        <a href="https://www.google.com/maps/place/KINGS+CUT+LANCASTER/@34.6072577,-118.2018416,20015m/data=!3m1!1e3!4m10!1m2!2m1!1sking+cuts!3m6!1s0x80c25b0fa78bee55:0x887d5db9680747a7!8m2!3d34.6902065!4d-118.1668145!15sCglraW5nIGN1dHNaCyIJa2luZyBjdXNkgELYmFyYmVyX3Nob3CaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjFLU1dJemJIcFdSRnBHVTFkb2QxZ3lOWGRqYkU1MVV6QkdUVlF6WXhBQuABAPoBBAghEC0!16s%2Fg%2F11x97qnf6s?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank" style="font-size: 0.85rem; opacity: 0.8;"><i class="fab fa-google"></i>
                             Maps</a>
                     </li>
@@ -325,9 +326,32 @@
 
         <!-- Bottom Bar -->
         <div class="aw-footer-bottom">
-            <p>© <span id="year"></span> Kings Cut Barber Shop. All rights reserved.</p>
+            <p>© <span id="year"></span> Kings Cut Barber Shop. All rights reserved. | Serving the Antelope Valley with
+                style.
+            </p>
         </div>
     </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 style="color: var(--primary-blue); margin-bottom: 10px;">Select Location</h2>
+            <p style="color: var(--text-light); margin-bottom: 30px;">Choose a shop to view barbers and book your
+                appointment.</p>
+
+            <div class="modal-buttons">
+                <a href="/locations/palmdale/" class="modal-btn palmdale-btn">
+                    <span class="modal-btn-title">Palmdale</span>
+                    <span class="modal-btn-address">2311 E Avenue S</span>
+                </a>
+                <a href="/locations/lancaster/" class="modal-btn lancaster-btn">
+                    <span class="modal-btn-title">Lancaster</span>
+                    <span class="modal-btn-address">2029 W Ave J</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="../js/script.js"></script>
 
