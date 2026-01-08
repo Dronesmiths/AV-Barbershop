@@ -53,7 +53,7 @@
     <header>
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Kings Cut Barber Shop" style="height: 70px; vertical-align: middle;">
+                <img src="images/logo.png" alt="Kings Cut Barber Shop">
             </a>
             <nav class="nav-menu">
                 <ul>
@@ -67,7 +67,7 @@
             </nav>
             <div class="header-actions">
                 <a href="tel:6614414959" class="phone-link mobile-hide"><i class="fas fa-phone"></i> (661) 441-4959</a>
-                <a href="contact/" class="btn btn-primary">Book Appointment</a>
+                <a href="#" class="btn btn-primary js-book-btn">Book Appointment</a>
                 <button class="mobile-menu-btn" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
             </div>
         </div>
@@ -77,11 +77,11 @@
     <section class="hero" id="home"
         style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-final.png');">
         <div class="container">
-            <h1>Premium Grooming for the Gentleman of Antelope Valley</h1>
+            <h1>Elevate Your Look With Kings Cut Barbershop</h1>
             <p>Precision cuts, hot towel shaves, and beard trims. Experience the art of traditional barbering in a
                 modern setting. Serving Palmdale and Lancaster.</p>
             <div class="hero-btns">
-                <a href="contact/" class="btn btn-primary">Book Appointment</a>
+                <a href="#" class="btn btn-primary js-book-btn">Book Appointment</a>
                 <a href="#services" class="btn btn-secondary">Our Services</a>
             </div>
         </div>
@@ -452,7 +452,7 @@
                         <li>Neck Shave</li>
                         <li>Style Finish</li>
                     </ul>
-                    <a href="tel:6614414959" class="av-pricing-cta">Book Now</a>
+                    <a href="#" class="av-pricing-cta js-book-btn">Book Now</a>
                 </div>
 
                 <!-- Haircut & Beard -->
@@ -467,7 +467,7 @@
                         <li>Line Up</li>
                         <li>Hot Towel Finish</li>
                     </ul>
-                    <a href="tel:6614414959" class="av-pricing-cta">Book Now</a>
+                    <a href="#" class="av-pricing-cta js-book-btn">Book Now</a>
                 </div>
 
                 <!-- Shave -->
@@ -481,7 +481,7 @@
                         <li>Rich Lather</li>
                         <li>Aftershave Balm</li>
                     </ul>
-                    <a href="tel:6614414959" class="av-pricing-cta">Book Now</a>
+                    <a href="#" class="av-pricing-cta js-book-btn">Book Now</a>
                 </div>
             </div>
         </div>
@@ -533,7 +533,7 @@
             </div>
 
             <div class="faq-cta">
-                <a href="tel:6614414959" class="btn btn-primary"
+                <a href="#" class="btn btn-primary js-book-btn"
                     style="padding: 16px 40px; font-size: 1.1rem; border: 3px solid var(--primary-gold);">
                     Contact Us / Book Now
                 </a>
@@ -554,8 +554,9 @@
             <!-- Contact -->
             <div class="aw-footer-contact">
                 <p class="aw-footer-phone">
-                    <span>📞</span>
+                    <i class="fas fa-cut"></i>
                     <a href="tel:6614414959">(661) 441-4959</a>
+                    <i class="fas fa-cut" style="transform: scaleX(-1);"></i>
                 </p>
                 <div style="margin-top: 15px;">
                     <a href="https://www.instagram.com/_kings_cut_" target="_blank"
@@ -613,6 +614,27 @@
             </p>
         </div>
     </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 style="color: var(--primary-blue); margin-bottom: 10px;">Select Location</h2>
+            <p style="color: var(--text-light); margin-bottom: 30px;">Choose a shop to view barbers and book your
+                appointment.</p>
+
+            <div class="modal-buttons">
+                <a href="locations/palmdale/" class="modal-btn palmdale-btn">
+                    <span class="modal-btn-title">Palmdale</span>
+                    <span class="modal-btn-address">2311 E Avenue S</span>
+                </a>
+                <a href="locations/lancaster/" class="modal-btn lancaster-btn">
+                    <span class="modal-btn-title">Lancaster</span>
+                    <span class="modal-btn-address">2029 W Ave J</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

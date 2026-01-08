@@ -85,4 +85,44 @@ document.addEventListener('DOMContentLoaded', () => {
             range.addEventListener('input', e => update(e.target.value));
         }
     });
+    // Booking Modal Logic
+    const modal = document.getElementById('bookingModal');
+    const closeBtn = document.querySelector('.modal-close');
+    const bookBtns = document.querySelectorAll('.js-book-btn');
+
+    if (modal) {
+        // Open Modal
+        bookBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        });
+
+        // Close Modal Function
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        // Close on X button
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+
+        // Close on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
 });
